@@ -1,0 +1,21 @@
+﻿@using AuxiliarHtmlPersonalizado.Helpers
+@{
+        ViewBag.Title = "Index";
+}
+    <div class="row">
+        <div class="col-md-12">
+            @using (@Html.BeginForm())
+            {
+                <div class="form-group">
+                    @Html.Etiqueta("Nombre","Nombre")
+                    @Html.TextBox("Nombre", null, new { @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    @Html.Etiqueta("Correo","Correo")
+                    @Html.TextBox("Correo",null,new {@class= "form-control" })
+                </div>
+                @Html.Boton("btn btn-default","Enviar")
+            }
+        </div>
+    </div>
+
